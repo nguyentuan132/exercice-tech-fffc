@@ -36,13 +36,13 @@ L’outil doit être robuste, simple d’utilisation via une interface en ligne 
 
 ### Diagramme de cas d’utilisation
 
-![alt text](https://github.com/nguyentuan132/exercice-tech-fffc/blob/main/docs/images/usecase%20.svg)
+![alt text](https://github.com/nguyentuan132/exercice-tech-fffc/blob/tuan-fffc/docs/images/usecase%20.svg)
 
 ---
 
 ## 4. Diagramme de séquence
 
-![alt text](https://github.com/nguyentuan132/exercice-tech-fffc/blob/main/docs/images/diagram_sequence.svg)
+![alt text](https://github.com/nguyentuan132/exercice-tech-fffc/blob/tuan-fffc/docs/images/diagram_sequence.svg)
 
 ---
 
