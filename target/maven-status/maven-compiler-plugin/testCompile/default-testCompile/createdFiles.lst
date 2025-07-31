@@ -1,6 +1,0 @@
-com\ikkileague\data\AppTest.class
-com\ikkileague\data\formatter\DataFormatterTest.class
-com\ikkileague\data\parser\FixedRecordParserTest.class
-com\ikkileague\data\core\FileConverterTest.class
-com\ikkileague\data\writer\CsvWriterTest.class
-com\ikkileague\data\parser\MetadataParserTest.class
