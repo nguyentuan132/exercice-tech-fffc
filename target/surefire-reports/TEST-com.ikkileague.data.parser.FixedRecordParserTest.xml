@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.ikkileague.data.parser.FixedRecordParserTest" time="0.037" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\dev\exercice-tech-fffc\target\test-classes;D:\dev\exercice-tech-fffc\target\classes;C:\Users\nguye\.m2\repository\org\apache\commons\commons-csv\1.10.0\commons-csv-1.10.0.jar;C:\Users\nguye\.m2\repository\info\picocli\picocli\4.7.0\picocli-4.7.0.jar;C:\Users\nguye\.m2\repository\info\picocli\picocli-codegen\4.7.0\picocli-codegen-4.7.0.jar;C:\Users\nguye\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\nguye\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\nguye\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\nguye\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\nguye\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\nguye\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\nguye\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\nguye\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\nguye\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\nguye\.m2\repository\org\mockito\mockito-core\5.12.0\mockito-core-5.12.0.jar;C:\Users\nguye\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\nguye\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.15\byte-buddy-agent-1.14.15.jar;C:\Users\nguye\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\nguye\.m2\repository\org\mockito\mockito-junit-jupiter\5.12.0\mockito-junit-jupiter-5.12.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\nguye\AppData\Local\Temp\surefire9628392095066033865\surefirebooter-20250731233055269_3.jar C:\Users\nguye\AppData\Local\Temp\surefire9628392095066033865 2025-07-31T23-30-55_078-jvmRun1 surefire-20250731233055269_1tmp surefire_0-20250731233055269_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\dev\exercice-tech-fffc\target\test-classes;D:\dev\exercice-tech-fffc\target\classes;C:\Users\nguye\.m2\repository\org\apache\commons\commons-csv\1.10.0\commons-csv-1.10.0.jar;C:\Users\nguye\.m2\repository\info\picocli\picocli\4.7.0\picocli-4.7.0.jar;C:\Users\nguye\.m2\repository\info\picocli\picocli-codegen\4.7.0\picocli-codegen-4.7.0.jar;C:\Users\nguye\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\nguye\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\nguye\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\nguye\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\nguye\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\nguye\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\nguye\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\nguye\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\nguye\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\nguye\.m2\repository\org\mockito\mockito-core\5.12.0\mockito-core-5.12.0.jar;C:\Users\nguye\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\nguye\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.15\byte-buddy-agent-1.14.15.jar;C:\Users\nguye\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\nguye\.m2\repository\org\mockito\mockito-junit-jupiter\5.12.0\mockito-junit-jupiter-5.12.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\nguye"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\dev\exercice-tech-fffc"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\nguye\AppData\Local\Temp\surefire9628392095066033865\surefirebooter-20250731233055269_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.7+8-LTS-224"/>
+    <property name="user.name" value="nguye"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\nguye\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\nguye\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.7"/>
+    <property name="user.dir" value="D:\dev\exercice-tech-fffc"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\opt\vertx\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-17\bin;C:\Users\nguye\apache-maven-3.9.4\bin;C:\Program Files\Vagrant\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\nguye\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\nguye\AppData\Local\Programs\Python\Python38\;C:\Users\nguye\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-17\bin;C:\Users\nguye\apache-maven-3.9.4\apache-maven\src\bin;C:\opt\vertx\bin;C:\Program Files\sfdx\bin;C:\Program Files\heroku\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Users\nguye\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\nguye\AppData\Roaming\npm;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.7+8-LTS-224"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="parseLine_emptyDefinitions_returnsEmptyList" classname="com.ikkileague.data.parser.FixedRecordParserTest" time="0.006">
+    <system-out><![CDATA[23:30:57.450 [main] INFO  c.i.d.parser.FixedRecordParserTest:29 - --- Setting up FixedRecordParserTest for a new test ---
+23:30:57.451 [main] INFO  c.i.d.parser.FixedRecordParserTest:137 - Starting test: parseLine_emptyDefinitions_returnsEmptyList
+23:30:57.452 [main] DEBUG c.i.d.parser.FixedRecordParserTest:142 - Given empty definitions list. Fixed line: ''
+23:30:57.452 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 0 : 
+23:30:57.453 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 0 : []
+23:30:57.453 [main] DEBUG c.i.d.parser.FixedRecordParserTest:146 - Parsed fields: []
+23:30:57.454 [main] INFO  c.i.d.parser.FixedRecordParserTest:151 - Test passed: Handled empty definitions list correctly.
+]]></system-out>
+  </testcase>
+  <testcase name="parseLine_lineTooShort_throwsException" classname="com.ikkileague.data.parser.FixedRecordParserTest" time="0.005">
+    <system-out><![CDATA[23:30:57.457 [main] INFO  c.i.d.parser.FixedRecordParserTest:29 - --- Setting up FixedRecordParserTest for a new test ---
+23:30:57.457 [main] INFO  c.i.d.parser.FixedRecordParserTest:89 - Starting test: parseLine_lineTooShort_throwsException
+23:30:57.458 [main] DEBUG c.i.d.parser.FixedRecordParserTest:97 - Given definitions: [ColumnDefinition{name='Name', type='STRING',  length=10}, ColumnDefinition{name='Age', type='NUMERIC',  length=3}]
+23:30:57.459 [main] DEBUG c.i.d.parser.FixedRecordParserTest:98 - Given short fixed line: 'NGUYEN 20'
+23:30:57.460 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 9 : NGUYEN 20
+23:30:57.460 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 2 : [ColumnDefinition{name='Name', type='STRING',  length=10}, ColumnDefinition{name='Age', type='NUMERIC',  length=3}]
+23:30:57.460 [main] ERROR c.i.data.parser.FixedRecordParser:46 - Ligne 5 : la longueur (9) ne correspond pas à la longueur attendue (13). Ligne : 'NGUYEN 20'
+23:30:57.460 [main] DEBUG c.i.d.parser.FixedRecordParserTest:103 - Exception caught: Ligne 5 : la longueur (9) ne correspond pas à la longueur attendue (13). Ligne : 'NGUYEN 20'
+23:30:57.461 [main] INFO  c.i.d.parser.FixedRecordParserTest:107 - Test passed: Correctly threw exception for line too short.
+]]></system-out>
+  </testcase>
+  <testcase name="parseLine_lineTooLong_throwsException" classname="com.ikkileague.data.parser.FixedRecordParserTest" time="0.009">
+    <system-out><![CDATA[23:30:57.463 [main] INFO  c.i.d.parser.FixedRecordParserTest:29 - --- Setting up FixedRecordParserTest for a new test ---
+23:30:57.464 [main] INFO  c.i.d.parser.FixedRecordParserTest:113 - Starting test: parseLine_lineTooLong_throwsException
+23:30:57.464 [main] DEBUG c.i.d.parser.FixedRecordParserTest:121 - Given definitions: [ColumnDefinition{name='Nom', type='STRING',  length=5}, ColumnDefinition{name='Prenom', type='STRING',  length=10}]
+23:30:57.464 [main] DEBUG c.i.d.parser.FixedRecordParserTest:122 - Given fixed line for column length exceed: 'Rémi            Martin Martin'
+23:30:57.465 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 29 : Rémi            Martin Martin
+23:30:57.466 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 2 : [ColumnDefinition{name='Nom', type='STRING',  length=5}, ColumnDefinition{name='Prenom', type='STRING',  length=10}]
+23:30:57.470 [main] ERROR c.i.data.parser.FixedRecordParser:46 - Ligne 3 : la longueur (29) ne correspond pas à la longueur attendue (15). Ligne : 'Rémi            Martin Martin'
+23:30:57.471 [main] DEBUG c.i.d.parser.FixedRecordParserTest:127 - Exception lineTooLong caught: Ligne 3 : la longueur (29) ne correspond pas à la longueur attendue (15). Ligne : 'Rémi            Martin Martin'
+23:30:57.471 [main] INFO  c.i.d.parser.FixedRecordParserTest:131 - Test passed: Correctly threw exception for line too short.
+]]></system-out>
+  </testcase>
+  <testcase name="parseLine_validLine_returnsCorrectFields" classname="com.ikkileague.data.parser.FixedRecordParserTest" time="0.003">
+    <system-out><![CDATA[23:30:57.472 [main] INFO  c.i.d.parser.FixedRecordParserTest:29 - --- Setting up FixedRecordParserTest for a new test ---
+23:30:57.473 [main] INFO  c.i.d.parser.FixedRecordParserTest:35 - Starting test: parseLine_validLine_returnsCorrectFields
+23:30:57.473 [main] DEBUG c.i.d.parser.FixedRecordParserTest:44 - Given definitions: [ColumnDefinition{name='Date', type='DATE',  length=10}, ColumnDefinition{name='FullName', type='STRING',  length=15}, ColumnDefinition{name='Weight', type='NUMERIC',  length=5}]
+23:30:57.473 [main] DEBUG c.i.d.parser.FixedRecordParserTest:45 - Given fixed line: '1970-01-01John Smith     81.5 '
+23:30:57.474 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 30 : 1970-01-01John Smith     81.5 
+23:30:57.474 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 3 : [ColumnDefinition{name='Date', type='DATE',  length=10}, ColumnDefinition{name='FullName', type='STRING',  length=15}, ColumnDefinition{name='Weight', type='NUMERIC',  length=5}]
+23:30:57.474 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 1970-01-01
+23:30:57.474 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 15 : John Smith     
+23:30:57.474 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 5 : 81.5 
+23:30:57.475 [main] DEBUG c.i.d.parser.FixedRecordParserTest:49 - Parsed fields: [1970-01-01, John Smith     , 81.5 ]
+23:30:57.475 [main] INFO  c.i.d.parser.FixedRecordParserTest:57 - Test passed: Successfully parsed valid line.
+]]></system-out>
+  </testcase>
+  <testcase name="parseLine_withUtf8Chars_returnsCorrectFields" classname="com.ikkileague.data.parser.FixedRecordParserTest" time="0.007">
+    <system-out><![CDATA[23:30:57.476 [main] INFO  c.i.d.parser.FixedRecordParserTest:29 - --- Setting up FixedRecordParserTest for a new test ---
+23:30:57.477 [main] INFO  c.i.d.parser.FixedRecordParserTest:63 - Starting test: parseLine_withUtf8Chars_returnsCorrectFields
+23:30:57.477 [main] DEBUG c.i.d.parser.FixedRecordParserTest:71 - Given definitions: [ColumnDefinition{name='City', type='STRING',  length=10}, ColumnDefinition{name='Name', type='STRING',  length=10}]
+23:30:57.477 [main] DEBUG c.i.d.parser.FixedRecordParserTest:72 - Given fixed line with UTF-8: 'éèçà$ïî   Rémi      '
+23:30:57.481 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 20 : éèçà$ïî   Rémi      
+23:30:57.481 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 2 : [ColumnDefinition{name='City', type='STRING',  length=10}, ColumnDefinition{name='Name', type='STRING',  length=10}]
+23:30:57.482 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : éèçà$ïî   
+23:30:57.482 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : Rémi      
+23:30:57.482 [main] DEBUG c.i.d.parser.FixedRecordParserTest:76 - Parsed fields with UTF-8: [éèçà$ïî   , Rémi      ]
+23:30:57.482 [main] INFO  c.i.d.parser.FixedRecordParserTest:83 - Test passed: Handled UTF-8 characters correctly.
+]]></system-out>
+  </testcase>
+</testsuite>

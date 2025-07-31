@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.ikkileague.data.core.FileConverterTest" time="1.066" tests="7" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\dev\exercice-tech-fffc\target\test-classes;D:\dev\exercice-tech-fffc\target\classes;C:\Users\nguye\.m2\repository\org\apache\commons\commons-csv\1.10.0\commons-csv-1.10.0.jar;C:\Users\nguye\.m2\repository\info\picocli\picocli\4.7.0\picocli-4.7.0.jar;C:\Users\nguye\.m2\repository\info\picocli\picocli-codegen\4.7.0\picocli-codegen-4.7.0.jar;C:\Users\nguye\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\nguye\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\nguye\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\nguye\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\nguye\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\nguye\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\nguye\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\nguye\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\nguye\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\nguye\.m2\repository\org\mockito\mockito-core\5.12.0\mockito-core-5.12.0.jar;C:\Users\nguye\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\nguye\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.15\byte-buddy-agent-1.14.15.jar;C:\Users\nguye\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\nguye\.m2\repository\org\mockito\mockito-junit-jupiter\5.12.0\mockito-junit-jupiter-5.12.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\nguye\AppData\Local\Temp\surefire9628392095066033865\surefirebooter-20250731233055269_3.jar C:\Users\nguye\AppData\Local\Temp\surefire9628392095066033865 2025-07-31T23-30-55_078-jvmRun1 surefire-20250731233055269_1tmp surefire_0-20250731233055269_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\dev\exercice-tech-fffc\target\test-classes;D:\dev\exercice-tech-fffc\target\classes;C:\Users\nguye\.m2\repository\org\apache\commons\commons-csv\1.10.0\commons-csv-1.10.0.jar;C:\Users\nguye\.m2\repository\info\picocli\picocli\4.7.0\picocli-4.7.0.jar;C:\Users\nguye\.m2\repository\info\picocli\picocli-codegen\4.7.0\picocli-codegen-4.7.0.jar;C:\Users\nguye\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\nguye\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\nguye\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\nguye\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\nguye\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\nguye\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\nguye\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\nguye\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\nguye\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\nguye\.m2\repository\org\mockito\mockito-core\5.12.0\mockito-core-5.12.0.jar;C:\Users\nguye\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\nguye\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.15\byte-buddy-agent-1.14.15.jar;C:\Users\nguye\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\nguye\.m2\repository\org\mockito\mockito-junit-jupiter\5.12.0\mockito-junit-jupiter-5.12.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\nguye"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\dev\exercice-tech-fffc"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\nguye\AppData\Local\Temp\surefire9628392095066033865\surefirebooter-20250731233055269_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.7+8-LTS-224"/>
+    <property name="user.name" value="nguye"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\nguye\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\nguye\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.7"/>
+    <property name="user.dir" value="D:\dev\exercice-tech-fffc"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\opt\vertx\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-17\bin;C:\Users\nguye\apache-maven-3.9.4\bin;C:\Program Files\Vagrant\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\nguye\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\nguye\AppData\Local\Programs\Python\Python38\;C:\Users\nguye\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-17\bin;C:\Users\nguye\apache-maven-3.9.4\apache-maven\src\bin;C:\opt\vertx\bin;C:\Program Files\sfdx\bin;C:\Program Files\heroku\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Users\nguye\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\nguye\AppData\Roaming\npm;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.7+8-LTS-224"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="convert_lineTooShortInInput_throwsException" classname="com.ikkileague.data.core.FileConverterTest" time="0.323">
+    <system-out><![CDATA[23:30:56,344 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
+23:30:56,346 |-INFO in ch.qos.logback.classic.util.ContextInitializer@25d958c6 - No custom configurators were discovered as a service.
+23:30:56,346 |-INFO in ch.qos.logback.classic.util.ContextInitializer@25d958c6 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+23:30:56,349 |-INFO in ch.qos.logback.classic.util.ContextInitializer@25d958c6 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+23:30:56,353 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+23:30:56,354 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+23:30:56,365 |-INFO in ch.qos.logback.classic.util.ContextInitializer@25d958c6 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 6 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+23:30:56,365 |-INFO in ch.qos.logback.classic.util.ContextInitializer@25d958c6 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+23:30:56,367 |-INFO in ch.qos.logback.classic.util.ContextInitializer@25d958c6 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+23:30:56,371 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback-test.xml] at [file:/D:/dev/exercice-tech-fffc/target/test-classes/logback-test.xml]
+23:30:56,561 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+23:30:56,561 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:30:56,577 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:30:56,641 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+23:30:56,641 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+23:30:56,670 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1149388444 - No compression will be used
+23:30:56,673 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1149388444 - Will use the pattern logs/fixed-to-csv.%d{yyyy-MM-dd}.%i.log for the active file
+23:30:56,681 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3703bf3c - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/fixed-to-csv.%d{yyyy-MM-dd}.%i.log'.
+23:30:56,681 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3703bf3c - Roll-over at midnight.
+23:30:56,682 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3703bf3c - Setting initial period to 2025-07-31T21:30:29.924Z
+23:30:56,683 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3703bf3c - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+23:30:56,683 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3703bf3c - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+23:30:56,721 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:30:56,728 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: logs/fixed-to-csv.log
+23:30:56,728 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [logs/fixed-to-csv.log]
+23:30:56,730 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+23:30:56,731 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+23:30:56,732 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+23:30:56,733 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [com.ikkileague.data] to DEBUG
+23:30:56,736 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [com.ikkileague.data] to false
+23:30:56,736 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[com.ikkileague.data]
+23:30:56,736 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[com.ikkileague.data]
+23:30:56,736 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [picocli] to WARN
+23:30:56,736 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [picocli] to false
+23:30:56,736 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[picocli]
+23:30:56,736 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[picocli]
+23:30:56,737 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@34cf5a97 - End of configuration.
+23:30:56,738 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@5b3f3ba0 - Registering current configuration as safe fallback point
+23:30:56,738 |-INFO in ch.qos.logback.classic.util.ContextInitializer@25d958c6 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 371 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+23:30:56.999 [main] INFO  c.i.data.core.FileConverterTest:36 - --- Initialisation d’un nouveau test FileConverter ---
+23:30:57.016 [main] DEBUG c.i.data.core.FileConverterTest:43 - Répertoire temporaire : C:\Users\nguye\AppData\Local\Temp\junit17211410556456125006
+23:30:57.020 [main] DEBUG c.i.data.core.FileConverterTest:44 - Chemin fichier d'entrée : C:\Users\nguye\AppData\Local\Temp\junit17211410556456125006\input_data.txt
+23:30:57.020 [main] DEBUG c.i.data.core.FileConverterTest:45 - Chemin fichier métadonnées : C:\Users\nguye\AppData\Local\Temp\junit17211410556456125006\metadata.csv
+23:30:57.021 [main] DEBUG c.i.data.core.FileConverterTest:46 - Chemin fichier de sortie : C:\Users\nguye\AppData\Local\Temp\junit17211410556456125006\output.csv
+23:30:57.023 [main] INFO  c.i.data.core.FileConverterTest:167 - Test : Ligne trop courte
+23:30:57.032 [main] INFO  c.ikkileague.data.core.FileConverter:42 - Début de la conversion : Fichier fixe 'C:\Users\nguye\AppData\Local\Temp\junit17211410556456125006\input_data.txt' + Métadonnées 'C:\Users\nguye\AppData\Local\Temp\junit17211410556456125006\metadata.csv' -> CSV 'C:\Users\nguye\AppData\Local\Temp\junit17211410556456125006\output.csv'
+23:30:57.047 [main] DEBUG c.ikkileague.data.core.FileConverter:52 - Définitions de 3 colonnes extraites depuis les métadonnées.
+23:30:57.049 [main] INFO  c.ikkileague.data.writer.CsvWriter:27 - Initializing CSV writer for output file: C:\Users\nguye\AppData\Local\Temp\junit17211410556456125006\output.csv
+23:30:57.050 [main] DEBUG c.ikkileague.data.writer.CsvWriter:28 - CSV Headers: [ID, Nom, DateNaissance]
+23:30:57.055 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 10 : 0000000001
+23:30:57.055 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 3 : [ColumnDefinition{name='ID', type='NUMERIC',  length=10}, ColumnDefinition{name='Nom', type='STRING',  length=25}, ColumnDefinition{name='DateNaissance', type='DATE',  length=10}]
+23:30:57.056 [main] ERROR c.i.data.parser.FixedRecordParser:46 - Ligne 1 : la longueur (10) ne correspond pas à la longueur attendue (45). Ligne : '0000000001'
+23:30:57.056 [main] INFO  c.ikkileague.data.writer.CsvWriter:58 - Closing CSV writer.
+23:30:57.057 [main] DEBUG c.i.data.core.FileConverterTest:178 - Line Too Short excep msg: Ligne 1 : la longueur (10) ne correspond pas à la longueur attendue (45). Ligne : '0000000001' 
+
+]]></system-out>
+  </testcase>
+  <testcase name="convert_validFixedFileAndMetadata_createsCorrectCsv" classname="com.ikkileague.data.core.FileConverterTest" time="0.046">
+    <system-out><![CDATA[23:30:57.084 [main] INFO  c.i.data.core.FileConverterTest:36 - --- Initialisation d’un nouveau test FileConverter ---
+23:30:57.086 [main] DEBUG c.i.data.core.FileConverterTest:43 - Répertoire temporaire : C:\Users\nguye\AppData\Local\Temp\junit6875510227540068638
+23:30:57.086 [main] DEBUG c.i.data.core.FileConverterTest:44 - Chemin fichier d'entrée : C:\Users\nguye\AppData\Local\Temp\junit6875510227540068638\input_data.txt
+23:30:57.087 [main] DEBUG c.i.data.core.FileConverterTest:45 - Chemin fichier métadonnées : C:\Users\nguye\AppData\Local\Temp\junit6875510227540068638\metadata.csv
+23:30:57.087 [main] DEBUG c.i.data.core.FileConverterTest:46 - Chemin fichier de sortie : C:\Users\nguye\AppData\Local\Temp\junit6875510227540068638\output.csv
+23:30:57.088 [main] INFO  c.i.data.core.FileConverterTest:52 - Test : Conversion avec fichier et métadonnées valides
+23:30:57.090 [main] INFO  c.ikkileague.data.core.FileConverter:42 - Début de la conversion : Fichier fixe 'C:\Users\nguye\AppData\Local\Temp\junit6875510227540068638\input_data.txt' + Métadonnées 'C:\Users\nguye\AppData\Local\Temp\junit6875510227540068638\metadata.csv' -> CSV 'C:\Users\nguye\AppData\Local\Temp\junit6875510227540068638\output.csv'
+23:30:57.095 [main] DEBUG c.ikkileague.data.core.FileConverter:52 - Définitions de 3 colonnes extraites depuis les métadonnées.
+23:30:57.097 [main] INFO  c.ikkileague.data.writer.CsvWriter:27 - Initializing CSV writer for output file: C:\Users\nguye\AppData\Local\Temp\junit6875510227540068638\output.csv
+23:30:57.098 [main] DEBUG c.ikkileague.data.writer.CsvWriter:28 - CSV Headers: [ID, Nom, DateNaissance]
+23:30:57.099 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 45 : 0000000001Jean Dupont              1990-05-15
+23:30:57.099 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 3 : [ColumnDefinition{name='ID', type='NUMERIC',  length=10}, ColumnDefinition{name='Nom', type='STRING',  length=25}, ColumnDefinition{name='DateNaissance', type='DATE',  length=10}]
+23:30:57.100 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 0000000001
+23:30:57.101 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 25 : Jean Dupont              
+23:30:57.101 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 1990-05-15
+23:30:57.109 [main] DEBUG c.ikkileague.data.core.FileConverter:104 - Ligne 1 traitée et écrite avec succès dans le CSV.
+23:30:57.110 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 45 : 0000000002Alice Smith              2000-11-30
+23:30:57.110 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 3 : [ColumnDefinition{name='ID', type='NUMERIC',  length=10}, ColumnDefinition{name='Nom', type='STRING',  length=25}, ColumnDefinition{name='DateNaissance', type='DATE',  length=10}]
+23:30:57.111 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 0000000002
+23:30:57.111 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 25 : Alice Smith              
+23:30:57.111 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 2000-11-30
+23:30:57.111 [main] DEBUG c.ikkileague.data.core.FileConverter:104 - Ligne 2 traitée et écrite avec succès dans le CSV.
+23:30:57.112 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 45 : 0000000003Bob Martin               1985-01-01
+23:30:57.112 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 3 : [ColumnDefinition{name='ID', type='NUMERIC',  length=10}, ColumnDefinition{name='Nom', type='STRING',  length=25}, ColumnDefinition{name='DateNaissance', type='DATE',  length=10}]
+23:30:57.112 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 0000000003
+23:30:57.113 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 25 : Bob Martin               
+23:30:57.114 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 1985-01-01
+23:30:57.114 [main] DEBUG c.ikkileague.data.core.FileConverter:104 - Ligne 3 traitée et écrite avec succès dans le CSV.
+23:30:57.115 [main] INFO  c.ikkileague.data.core.FileConverter:106 - Fichier fixe entièrement traité. Nombre total de lignes : 3
+23:30:57.115 [main] INFO  c.ikkileague.data.writer.CsvWriter:58 - Closing CSV writer.
+]]></system-out>
+  </testcase>
+  <testcase name="convert_invalidNumericFormatInInput_throwsException" classname="com.ikkileague.data.core.FileConverterTest" time="0.036">
+    <system-out><![CDATA[23:30:57.132 [main] INFO  c.i.data.core.FileConverterTest:36 - --- Initialisation d’un nouveau test FileConverter ---
+23:30:57.132 [main] DEBUG c.i.data.core.FileConverterTest:43 - Répertoire temporaire : C:\Users\nguye\AppData\Local\Temp\junit10724590922074955747
+23:30:57.132 [main] DEBUG c.i.data.core.FileConverterTest:44 - Chemin fichier d'entrée : C:\Users\nguye\AppData\Local\Temp\junit10724590922074955747\input_data.txt
+23:30:57.133 [main] DEBUG c.i.data.core.FileConverterTest:45 - Chemin fichier métadonnées : C:\Users\nguye\AppData\Local\Temp\junit10724590922074955747\metadata.csv
+23:30:57.133 [main] DEBUG c.i.data.core.FileConverterTest:46 - Chemin fichier de sortie : C:\Users\nguye\AppData\Local\Temp\junit10724590922074955747\output.csv
+23:30:57.133 [main] INFO  c.i.data.core.FileConverterTest:149 - Test : Valeur numérique invalide
+23:30:57.135 [main] INFO  c.ikkileague.data.core.FileConverter:42 - Début de la conversion : Fichier fixe 'C:\Users\nguye\AppData\Local\Temp\junit10724590922074955747\input_data.txt' + Métadonnées 'C:\Users\nguye\AppData\Local\Temp\junit10724590922074955747\metadata.csv' -> CSV 'C:\Users\nguye\AppData\Local\Temp\junit10724590922074955747\output.csv'
+23:30:57.138 [main] DEBUG c.ikkileague.data.core.FileConverter:52 - Définitions de 2 colonnes extraites depuis les métadonnées.
+23:30:57.140 [main] INFO  c.ikkileague.data.writer.CsvWriter:27 - Initializing CSV writer for output file: C:\Users\nguye\AppData\Local\Temp\junit10724590922074955747\output.csv
+23:30:57.140 [main] DEBUG c.ikkileague.data.writer.CsvWriter:28 - CSV Headers: [ID, Nom]
+23:30:57.142 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 35 : ABCDEFGHIJJean Dupont              
+23:30:57.142 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 2 : [ColumnDefinition{name='ID', type='NUMERIC',  length=10}, ColumnDefinition{name='Nom', type='STRING',  length=25}]
+23:30:57.143 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : ABCDEFGHIJ
+23:30:57.144 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 25 : Jean Dupont              
+23:30:57.145 [main] ERROR c.i.data.formatter.DataFormatter:86 - Format numérique invalide : 'ABCDEFGHIJ'.
+java.lang.NumberFormatException: For input string: "ABCDEFGHIJ"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.ikkileague.data.formatter.DataFormatter.formatNumeric(DataFormatter.java:82)
+	at com.ikkileague.data.formatter.DataFormatter.format(DataFormatter.java:38)
+	at com.ikkileague.data.core.FileConverter.convert(FileConverter.java:90)
+	at com.ikkileague.data.core.FileConverterTest.lambda$convert_invalidNumericFormatInInput_throwsException$4(FileConverterTest.java:156)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3111)
+	at com.ikkileague.data.core.FileConverterTest.convert_invalidNumericFormatInInput_throwsException(FileConverterTest.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+23:30:57.157 [main] ERROR c.ikkileague.data.core.FileConverter:99 - Erreur lors du traitement du champ pour la colonne 'ID' (type NUMERIC) à la ligne 1 : Format numérique invalide : 'ABCDEFGHIJ'.
+com.ikkileague.data.exception.ConversionException: Format numérique invalide : 'ABCDEFGHIJ'.
+	at com.ikkileague.data.formatter.DataFormatter.formatNumeric(DataFormatter.java:87)
+	at com.ikkileague.data.formatter.DataFormatter.format(DataFormatter.java:38)
+	at com.ikkileague.data.core.FileConverter.convert(FileConverter.java:90)
+	at com.ikkileague.data.core.FileConverterTest.lambda$convert_invalidNumericFormatInInput_throwsException$4(FileConverterTest.java:156)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3111)
+	at com.ikkileague.data.core.FileConverterTest.convert_invalidNumericFormatInInput_throwsException(FileConverterTest.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.NumberFormatException: For input string: "ABCDEFGHIJ"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at com.ikkileague.data.formatter.DataFormatter.formatNumeric(DataFormatter.java:82)
+	... 78 common frames omitted
+23:30:57.161 [main] INFO  c.ikkileague.data.writer.CsvWriter:58 - Closing CSV writer.
+23:30:57.161 [main] DEBUG c.i.data.core.FileConverterTest:159 - Invalid numeric format msg: Erreur lors du traitement du champ pour la colonne 'ID' (type NUMERIC) à la ligne 1 : Format numérique invalide : 'ABCDEFGHIJ'. 
+
+]]></system-out>
+  </testcase>
+  <testcase name="convert_emptyMetadataFile_throwsException" classname="com.ikkileague.data.core.FileConverterTest" time="0.02">
+    <system-out><![CDATA[23:30:57.175 [main] INFO  c.i.data.core.FileConverterTest:36 - --- Initialisation d’un nouveau test FileConverter ---
+23:30:57.176 [main] DEBUG c.i.data.core.FileConverterTest:43 - Répertoire temporaire : C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078
+23:30:57.177 [main] DEBUG c.i.data.core.FileConverterTest:44 - Chemin fichier d'entrée : C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078\input_data.txt
+23:30:57.177 [main] DEBUG c.i.data.core.FileConverterTest:45 - Chemin fichier métadonnées : C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078\metadata.csv
+23:30:57.178 [main] DEBUG c.i.data.core.FileConverterTest:46 - Chemin fichier de sortie : C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078\output.csv
+23:30:57.178 [main] INFO  c.i.data.core.FileConverterTest:114 - Test : Fichier de métadonnées vide
+23:30:57.181 [main] INFO  c.ikkileague.data.core.FileConverter:42 - Début de la conversion : Fichier fixe 'C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078\input_data.txt' + Métadonnées 'C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078\metadata.csv' -> CSV 'C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078\output.csv'
+23:30:57.183 [main] ERROR c.i.data.parser.MetadataParser:59 - Le fichier de métadonnées est vide ou ne contient aucune définition valide : C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078\metadata.csv
+23:30:57.189 [main] DEBUG c.i.data.core.FileConverterTest:123 - File Matadata empty : 
+Le fichier de métadonnées est vide ou ne contient aucune définition valide : C:\Users\nguye\AppData\Local\Temp\junit11117049329619290078\metadata.csv
+]]></system-out>
+  </testcase>
+  <testcase name="convert_nonExistentMetadataFile_throwsException" classname="com.ikkileague.data.core.FileConverterTest" time="0.032">
+    <system-out><![CDATA[23:30:57.212 [main] INFO  c.i.data.core.FileConverterTest:36 - --- Initialisation d’un nouveau test FileConverter ---
+23:30:57.216 [main] DEBUG c.i.data.core.FileConverterTest:43 - Répertoire temporaire : C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205
+23:30:57.219 [main] DEBUG c.i.data.core.FileConverterTest:44 - Chemin fichier d'entrée : C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205\input_data.txt
+23:30:57.219 [main] DEBUG c.i.data.core.FileConverterTest:45 - Chemin fichier métadonnées : C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205\metadata.csv
+23:30:57.222 [main] DEBUG c.i.data.core.FileConverterTest:46 - Chemin fichier de sortie : C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205\output.csv
+23:30:57.223 [main] INFO  c.i.data.core.FileConverterTest:99 - Test : Métadonnées absentes
+23:30:57.227 [main] INFO  c.ikkileague.data.core.FileConverter:42 - Début de la conversion : Fichier fixe 'C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205\input_data.txt' + Métadonnées 'C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205\metadata.csv' -> CSV 'C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205\output.csv'
+23:30:57.229 [main] ERROR c.i.data.parser.MetadataParser:38 - Le fichier de métadonnées n'existe pas ou n'est pas un fichier valide : C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205\metadata.csv
+23:30:57.230 [main] DEBUG c.i.data.core.FileConverterTest:107 - File Matadata not found : 
+Le fichier de métadonnées n'existe pas ou n'est pas un fichier valide : C:\Users\nguye\AppData\Local\Temp\junit15016856257873682205\metadata.csv
+]]></system-out>
+  </testcase>
+  <testcase name="convert_nonExistentInputFile_throwsException" classname="com.ikkileague.data.core.FileConverterTest" time="0.019">
+    <system-out><![CDATA[23:30:57.245 [main] INFO  c.i.data.core.FileConverterTest:36 - --- Initialisation d’un nouveau test FileConverter ---
+23:30:57.245 [main] DEBUG c.i.data.core.FileConverterTest:43 - Répertoire temporaire : C:\Users\nguye\AppData\Local\Temp\junit8743697927788102567
+23:30:57.245 [main] DEBUG c.i.data.core.FileConverterTest:44 - Chemin fichier d'entrée : C:\Users\nguye\AppData\Local\Temp\junit8743697927788102567\input_data.txt
+23:30:57.246 [main] DEBUG c.i.data.core.FileConverterTest:45 - Chemin fichier métadonnées : C:\Users\nguye\AppData\Local\Temp\junit8743697927788102567\metadata.csv
+23:30:57.246 [main] DEBUG c.i.data.core.FileConverterTest:46 - Chemin fichier de sortie : C:\Users\nguye\AppData\Local\Temp\junit8743697927788102567\output.csv
+23:30:57.246 [main] INFO  c.i.data.core.FileConverterTest:82 - Test : Fichier d'entrée manquant
+23:30:57.249 [main] INFO  c.ikkileague.data.core.FileConverter:42 - Début de la conversion : Fichier fixe 'fichier_inexistant.txt' + Métadonnées 'C:\Users\nguye\AppData\Local\Temp\junit8743697927788102567\metadata.csv' -> CSV 'C:\Users\nguye\AppData\Local\Temp\junit8743697927788102567\output.csv'
+23:30:57.257 [main] DEBUG c.ikkileague.data.core.FileConverter:52 - Définitions de 3 colonnes extraites depuis les métadonnées.
+23:30:57.259 [main] DEBUG c.i.data.core.FileConverterTest:91 - File Data fixed not found : 
+Fichier d'entrée manquant ou non valide: fichier_inexistant.txt
+]]></system-out>
+  </testcase>
+  <testcase name="convert_invalidDateFormatInInput_throwsException" classname="com.ikkileague.data.core.FileConverterTest" time="0.026">
+    <system-out><![CDATA[23:30:57.268 [main] INFO  c.i.data.core.FileConverterTest:36 - --- Initialisation d’un nouveau test FileConverter ---
+23:30:57.269 [main] DEBUG c.i.data.core.FileConverterTest:43 - Répertoire temporaire : C:\Users\nguye\AppData\Local\Temp\junit8628166417427825000
+23:30:57.270 [main] DEBUG c.i.data.core.FileConverterTest:44 - Chemin fichier d'entrée : C:\Users\nguye\AppData\Local\Temp\junit8628166417427825000\input_data.txt
+23:30:57.272 [main] DEBUG c.i.data.core.FileConverterTest:45 - Chemin fichier métadonnées : C:\Users\nguye\AppData\Local\Temp\junit8628166417427825000\metadata.csv
+23:30:57.274 [main] DEBUG c.i.data.core.FileConverterTest:46 - Chemin fichier de sortie : C:\Users\nguye\AppData\Local\Temp\junit8628166417427825000\output.csv
+23:30:57.275 [main] INFO  c.i.data.core.FileConverterTest:131 - Test : Date au mauvais format
+23:30:57.276 [main] INFO  c.ikkileague.data.core.FileConverter:42 - Début de la conversion : Fichier fixe 'C:\Users\nguye\AppData\Local\Temp\junit8628166417427825000\input_data.txt' + Métadonnées 'C:\Users\nguye\AppData\Local\Temp\junit8628166417427825000\metadata.csv' -> CSV 'C:\Users\nguye\AppData\Local\Temp\junit8628166417427825000\output.csv'
+23:30:57.277 [main] DEBUG c.ikkileague.data.core.FileConverter:52 - Définitions de 2 colonnes extraites depuis les métadonnées.
+23:30:57.278 [main] INFO  c.ikkileague.data.writer.CsvWriter:27 - Initializing CSV writer for output file: C:\Users\nguye\AppData\Local\Temp\junit8628166417427825000\output.csv
+23:30:57.280 [main] DEBUG c.ikkileague.data.writer.CsvWriter:28 - CSV Headers: [ID, DateNaissance]
+23:30:57.281 [main] DEBUG c.i.data.parser.FixedRecordParser:37 - parseLine line 20 : 00000000011990/05/15
+23:30:57.282 [main] DEBUG c.i.data.parser.FixedRecordParser:38 - parseLine columnDefinitions 2 : [ColumnDefinition{name='ID', type='NUMERIC',  length=10}, ColumnDefinition{name='DateNaissance', type='DATE',  length=10}]
+23:30:57.282 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 0000000001
+23:30:57.282 [main] DEBUG c.i.data.parser.FixedRecordParser:57 - Champ extrait de longueur 10 : 1990/05/15
+23:30:57.283 [main] ERROR c.i.data.formatter.DataFormatter:61 - Format de date invalide : '1990/05/15'. Format attendu : YYYY-MM-DD.
+java.time.format.DateTimeParseException: Text '1990/05/15' could not be parsed at index 4
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1880)
+	at com.ikkileague.data.formatter.DataFormatter.formatDate(DataFormatter.java:58)
+	at com.ikkileague.data.formatter.DataFormatter.format(DataFormatter.java:36)
+	at com.ikkileague.data.core.FileConverter.convert(FileConverter.java:90)
+	at com.ikkileague.data.core.FileConverterTest.lambda$convert_invalidDateFormatInInput_throwsException$3(FileConverterTest.java:138)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3111)
+	at com.ikkileague.data.core.FileConverterTest.convert_invalidDateFormatInInput_throwsException(FileConverterTest.java:137)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+23:30:57.284 [main] ERROR c.ikkileague.data.core.FileConverter:99 - Erreur lors du traitement du champ pour la colonne 'DateNaissance' (type DATE) à la ligne 1 : Format de date invalide : '1990/05/15'. Format attendu : YYYY-MM-DD.
+com.ikkileague.data.exception.ConversionException: Format de date invalide : '1990/05/15'. Format attendu : YYYY-MM-DD.
+	at com.ikkileague.data.formatter.DataFormatter.formatDate(DataFormatter.java:62)
+	at com.ikkileague.data.formatter.DataFormatter.format(DataFormatter.java:36)
+	at com.ikkileague.data.core.FileConverter.convert(FileConverter.java:90)
+	at com.ikkileague.data.core.FileConverterTest.lambda$convert_invalidDateFormatInInput_throwsException$3(FileConverterTest.java:138)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3111)
+	at com.ikkileague.data.core.FileConverterTest.convert_invalidDateFormatInInput_throwsException(FileConverterTest.java:137)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.time.format.DateTimeParseException: Text '1990/05/15' could not be parsed at index 4
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1880)
+	at com.ikkileague.data.formatter.DataFormatter.formatDate(DataFormatter.java:58)
+	... 78 common frames omitted
+23:30:57.287 [main] INFO  c.ikkileague.data.writer.CsvWriter:58 - Closing CSV writer.
+23:30:57.288 [main] DEBUG c.i.data.core.FileConverterTest:141 - Invalid date format : Erreur lors du traitement du champ pour la colonne 'DateNaissance' (type DATE) à la ligne 1 : Format de date invalide : '1990/05/15'. Format attendu : YYYY-MM-DD. 
+
+]]></system-out>
+  </testcase>
+</testsuite>

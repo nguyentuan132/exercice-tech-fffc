@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FixedRecordParser.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Fixed File to CSV Converter</a> &gt; <a href="index.source.html" class="el_package">com.ikkileague.data.parser</a> &gt; <span class="el_source">FixedRecordParser.java</span></div><h1>FixedRecordParser.java</h1><pre class="source lang-java linenums">package com.ikkileague.data.parser;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.ikkileague.data.exception.ConversionException;
+import com.ikkileague.data.model.ColumnDefinition;
+
+<span class="fc" id="L12">public class FixedRecordParser {</span>
+
+<span class="fc" id="L14">    private static final Logger logger = LoggerFactory.getLogger(FixedRecordParser.class);</span>
+
+    /**
+     * Analyse une ligne de données au format fixe en fonction des définitions de
+     * colonnes.
+     *
+     * @param line              La ligne à analyser
+     * @param columnDefinitions La liste des colonnes avec leur position et longueur
+     * @param lineNumber        Le numéro de ligne dans le fichier (utile pour les
+     *                          erreurs)
+     * @return Une liste de champs extraits
+     * @throws ConversionException si la ligne ne correspond pas à la structure
+     *                             attendue
+     */
+    public List&lt;String&gt; parseLine(String line, List&lt;ColumnDefinition&gt; columnDefinitions, long lineNumber)
+            throws ConversionException {
+
+<span class="fc" id="L31">        List&lt;String&gt; fields = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L32">        int currentPosition = 0;</span>
+
+        // Calcule la longueur totale attendue de la ligne en fonction des définitions
+<span class="fc" id="L35">        int expectedTotalLength = columnDefinitions.stream().mapToInt(ColumnDefinition::getLength).sum();</span>
+
+<span class="fc" id="L37">        logger.debug(&quot;parseLine line {} : {}&quot;, line.length(), line);</span>
+<span class="fc" id="L38">        logger.debug(&quot;parseLine columnDefinitions {} : {}&quot;, columnDefinitions.size(), columnDefinitions.toArray());</span>
+
+        // Vérifie si la longueur de la ligne correspond bien à la somme des longueurs
+        // des colonnes
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (line.length() != expectedTotalLength) {</span>
+<span class="fc" id="L43">            String errorMessage = String.format(</span>
+                    &quot;Ligne %d : la longueur (%d) ne correspond pas à la longueur attendue (%d). Ligne : '%s'&quot;,
+<span class="fc" id="L45">                    lineNumber, line.length(), expectedTotalLength, line);</span>
+<span class="fc" id="L46">            logger.error(errorMessage);</span>
+<span class="fc" id="L47">            throw new ConversionException(errorMessage);</span>
+        }
+
+        // Extraction de chaque champ selon sa position et longueur définies
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        for (int i = 0; i &lt; columnDefinitions.size(); i++) {</span>
+<span class="fc" id="L52">            ColumnDefinition definition = columnDefinitions.get(i);</span>
+<span class="fc" id="L53">            int length = definition.getLength();</span>
+
+            // Découpe le champ à partir de la position actuelle
+<span class="fc" id="L56">            String field = line.substring(currentPosition, currentPosition + length);</span>
+<span class="fc" id="L57">            logger.debug(&quot;Champ extrait de longueur {} : {}&quot;, field.length(), field);</span>
+
+<span class="fc" id="L59">            fields.add(field);</span>
+<span class="fc" id="L60">            logger.trace(&quot;Ligne {} : champ extrait pour '{}' (longueur {}) à partir de '{}' -&gt; '{}'&quot;,</span>
+<span class="fc" id="L61">                    lineNumber, definition.getName(), length, field, field);</span>
+
+            // Mise à jour de la position pour le champ suivant
+<span class="fc" id="L64">            currentPosition += length;</span>
+        }
+
+<span class="fc" id="L67">        return fields;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

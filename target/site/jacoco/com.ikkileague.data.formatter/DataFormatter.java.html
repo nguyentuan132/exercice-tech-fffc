@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DataFormatter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Fixed File to CSV Converter</a> &gt; <a href="index.source.html" class="el_package">com.ikkileague.data.formatter</a> &gt; <span class="el_source">DataFormatter.java</span></div><h1>DataFormatter.java</h1><pre class="source lang-java linenums">package com.ikkileague.data.formatter;
+
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.ikkileague.data.exception.ConversionException;
+import com.ikkileague.data.model.ColumnType;
+
+<span class="fc" id="L12">public class DataFormatter {</span>
+
+<span class="fc" id="L14">    private static final Logger logger = LoggerFactory.getLogger(DataFormatter.class);</span>
+<span class="fc" id="L15">    private static final DateTimeFormatter INPUT_DATE_FORMAT = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd&quot;);</span>
+<span class="fc" id="L16">    private static final DateTimeFormatter OUTPUT_DATE_FORMAT = DateTimeFormatter.ofPattern(&quot;dd/MM/yyyy&quot;);</span>
+
+    /**
+     * Formate un champ brut en fonction de son type de colonne.
+     *
+     * @param rawField Le champ brut issu du fichier à largeur fixe.
+     * @param type     Le type de la colonne (DATE, NUMERIC, STRING).
+     * @return Le champ formaté.
+     * @throws ConversionException En cas d’erreur de formatage (date invalide,
+     *                             nombre incorrect, caractères interdits...).
+     */
+    public String format(String rawField, ColumnType type) throws ConversionException {
+        // La méthode trim() supprime les espaces en début et fin de chaîne (y compris
+        // tabulations, retours à la ligne, etc.)
+        // C’est souvent nécessaire pour les champs DATE et NUMERIC afin d’éviter les
+        // erreurs de parsing.
+<span class="fc" id="L32">        String trimmedField = rawField.trim();</span>
+
+<span class="pc bpc" id="L34" title="1 of 4 branches missed.">        switch (type) {</span>
+            case DATE:
+<span class="fc" id="L36">                return formatDate(trimmedField);</span>
+            case NUMERIC:
+<span class="fc" id="L38">                return formatNumeric(trimmedField);</span>
+            case STRING:
+<span class="fc" id="L40">                return formatString(rawField); // On garde rawField ici pour détecter les caractères interdits avant le</span>
+                                               // nettoyage
+            default:
+                // Cas de sécurité si de nouveaux types sont ajoutés sans être pris en charge
+<span class="nc" id="L44">                String errorMessage = &quot;Type de colonne inconnu ou non géré : &quot; + type;</span>
+<span class="nc" id="L45">                logger.error(errorMessage);</span>
+<span class="nc" id="L46">                throw new ConversionException(errorMessage);</span>
+        }
+    }
+
+    // Formate une date du format AAAA-MM-JJ vers JJ/MM/AAAA
+    private String formatDate(String rawDate) throws ConversionException {
+<span class="fc" id="L52">        logger.trace(&quot;Formatage de la date : '{}'&quot;, rawDate);</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (rawDate.isEmpty()) {</span>
+<span class="fc" id="L54">            return &quot;&quot;; // Retourne une chaîne vide si la date est vide. À adapter selon les règles</span>
+                       // métier.
+        }
+        try {
+<span class="fc" id="L58">            return OUTPUT_DATE_FORMAT.format(INPUT_DATE_FORMAT.parse(rawDate));</span>
+<span class="fc" id="L59">        } catch (DateTimeParseException e) {</span>
+<span class="fc" id="L60">            String errorMessage = &quot;Format de date invalide : '&quot; + rawDate + &quot;'. Format attendu : YYYY-MM-DD.&quot;;</span>
+<span class="fc" id="L61">            logger.error(errorMessage, e); // Log avec la trace complète</span>
+<span class="fc" id="L62">            throw new ConversionException(errorMessage, e);</span>
+        }
+    }
+
+    // Convertit une chaîne en nombre décimal
+    private String formatNumeric(String rawNumber) throws ConversionException {
+<span class="fc" id="L68">        logger.trace(&quot;Formatage d'un champ numérique : '{}'&quot;, rawNumber);</span>
+
+<span class="pc bpc" id="L70" title="1 of 4 branches missed.">        if (rawNumber == null || rawNumber.isBlank()) {</span>
+<span class="fc" id="L71">            return &quot;&quot;; // Retourne une chaîne vide si le champ est vide ou nul</span>
+        }
+
+<span class="fc" id="L74">        String trimmed = rawNumber.trim();</span>
+
+        try {
+            // Si la chaîne contient un point, on tente une conversion en double
+<span class="fc bfc" id="L78" title="All 2 branches covered.">            if (trimmed.contains(&quot;.&quot;)) {</span>
+<span class="fc" id="L79">                return String.valueOf(Double.parseDouble(trimmed));</span>
+            } else {
+                // Sinon, on tente une conversion en entier
+<span class="fc" id="L82">                return String.valueOf(Integer.parseInt(trimmed));</span>
+            }
+<span class="fc" id="L84">        } catch (NumberFormatException e) {</span>
+<span class="fc" id="L85">            String errorMessage = &quot;Format numérique invalide : '&quot; + rawNumber + &quot;'.&quot;;</span>
+<span class="fc" id="L86">            logger.error(errorMessage, e);</span>
+<span class="fc" id="L87">            throw new ConversionException(errorMessage, e);</span>
+        }
+    }
+
+    // Nettoie une chaîne et vérifie l’absence de caractères interdits
+    private String formatString(String rawString) throws ConversionException {
+        // Supprime uniquement les espaces en fin de chaîne
+<span class="fc" id="L94">        String trimmedString = rawString.stripTrailing(); </span>
+
+        // Règle métier : les retours à la ligne ne sont pas autorisés dans les champs
+        // texte
+<span class="fc bfc" id="L98" title="All 4 branches covered.">        if (trimmedString.contains(&quot;\r&quot;) || trimmedString.contains(&quot;\n&quot;)) {</span>
+<span class="fc" id="L99">            String errorMessage = &quot;Le champ texte contient des caractères interdits (CR or LF) : '&quot;</span>
+                    + rawString + &quot;'.&quot;;
+<span class="fc" id="L101">            logger.error(errorMessage);</span>
+<span class="fc" id="L102">            throw new ConversionException(errorMessage);</span>
+        }
+<span class="fc" id="L104">        logger.trace(&quot;Formatage de la chaîne : '{}' -&gt; '{}'&quot;, rawString, trimmedString);</span>
+<span class="fc" id="L105">        return trimmedString;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

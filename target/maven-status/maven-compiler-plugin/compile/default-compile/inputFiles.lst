@@ -1,0 +1,9 @@
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\exception\ConversionException.java
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\parser\MetadataParser.java
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\model\ColumnDefinition.java
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\parser\FixedRecordParser.java
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\ConverterApp.java
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\formatter\DataFormatter.java
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\core\FileConverter.java
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\model\ColumnType.java
+D:\dev\exercice-tech-fffc\src\main\java\com\ikkileague\data\writer\CsvWriter.java
