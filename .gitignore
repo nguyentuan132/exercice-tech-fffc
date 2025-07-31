@@ -1,0 +1,26 @@
+# Cacher le dossier du projet IDE (IntelliJ, Eclipse, VS Code)
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+
+# Cacher le dossier cible de Maven, contenant les classes compilées et le JAR
+/target/
+
+# Fichiers et dossiers spécifiques à l'exécution Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.log
+*.lock
+/logs/
+
+# Fichiers de configuration de l'environnement local
+# Ces fichiers contiennent souvent des informations sensibles ou spécifiques à votre machine
+.env
+.DS_Store
+Thumbs.db
